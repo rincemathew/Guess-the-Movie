@@ -1,19 +1,48 @@
-import { Button, Text, View } from "react-native";
+import { Text, View } from "react-native";
+import AppButton from "../../src/components/AppButton";
+import { Colors } from "../../src/themes/colors";
 
-export default function Index() {
+export default function HomeScreen() {
   return (
     <View
       style={{
         flex: 1,
         justifyContent: "center",
-        alignItems: "center",
+        padding: 20,
+        backgroundColor: Colors.background,
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Button title="Start Game" onPress={() => { }} />
-      <Button title="Instructions" onPress={() => { }} />
-      <Button title="High Scores" onPress={() => { }} />
-      <Button title="Exit" onPress={() => { }} />
+      <Text
+        style={{
+          fontSize: 36,
+          textAlign: "center",
+          fontWeight: "bold",
+          color: Colors.secondary,
+          marginBottom: 50,
+        }}
+      >
+        Guess The Movie
+      </Text>
+
+      <AppButton
+        title="PLAY"
+        onPress={() => {}}
+      />
+
+      <AppButton
+        title="LEADERBOARD"
+        onPress={() => {}}
+      />
+
+      <AppButton
+        title="SHOP"
+        onPress={() => {}}
+      />
+
+      <AppButton
+        title="SETTINGS"
+        onPress={() => {}}
+      />
     </View>
   );
 }
